@@ -1,5 +1,7 @@
 # Sabong — fight prototype
 
+> **Reference only — not production code.** This prototype uses floating-point math for quick iteration. The production simulation lives in `supabase/functions/_shared/sim/` and must be integer fixed-point (`docs/02-design/game-engine-design.md` §2.2). Do not copy code from here into the sim.
+
 Single-page prototype: you (Meron, Talisayin) vs. a bot in the ruweda.
 
 - `src/sim.js` — fight simulation, fixed 60 ticks/s, rules from `docs/01-requirements/game-design.md`.

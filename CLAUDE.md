@@ -1,22 +1,26 @@
 # CLAUDE.md — Instructions for AI coding agents
 
-This is a **spec-driven** project. Read the relevant spec in `/docs` before writing code, and keep code and specs in agreement.
+This is a **spec-driven** project. The specs in `/docs` are the source of truth. Read the relevant spec before writing code, and keep code and specs in agreement.
 
 ## Before starting any task
-1. Find the task in `docs/03-development/tasks.md` and the requirement IDs it references.
+1. Find the task in `docs/03-development/tasks.md` and the requirement IDs it references (or use `/implement-task <TASK-ID>`).
 2. Read the design sections for that area (`docs/02-design/*`) and the acceptance criteria (`docs/01-requirements/*`).
-3. If the spec is unclear or conflicts with what you find in the code, **stop and ask**. Do not guess, and do not silently change behavior.
+3. If the spec is unclear or conflicts with the code, **stop and ask**. Do not guess, and do not silently change behavior.
 
-## Hard rules
-- **Simulation (`supabase/functions/_shared/sim/**`)**: integer/fixed-point math only. No `Math.random`, `Math.sin/cos/atan2/pow/exp`, `Date`, `performance`, DOM, Deno or Node APIs, and no third-party imports. Any change that can change a replay result must bump `SIM_VERSION` and update the golden fixtures in the same PR.
-- **Shared code** (`_shared/sim`, `_shared/schemas`) must run in both Vite and Deno: use relative imports with `.ts` extensions, and bare specifiers only for packages in the Deno import map.
+## Path-specific rules (loaded automatically for matching files)
+| Paths | Rules |
+|---|---|
+| `supabase/functions/_shared/sim/**` | [.claude/rules/sim.md](.claude/rules/sim.md) |
+| `supabase/migrations/**`, `supabase/tests/**` | [.claude/rules/database-migrations.md](.claude/rules/database-migrations.md) |
+| `supabase/functions/**` | [.claude/rules/edge-functions.md](.claude/rules/edge-functions.md) |
+| `frontend/**` | [.claude/rules/frontend.md](.claude/rules/frontend.md) |
+
+## Rules that apply everywhere
 - **The client never writes game state.** Coins, results, records, ownership and roles change only in Edge Functions, through one transactional SQL function per operation.
-- **Every new table**: in the same migration, enable RLS, add policies and grants, add the `set_updated_at` trigger, and follow the naming conventions. Regenerate `frontend/src/types/database.types.ts` after migrations.
-- **Every Edge Function route**: Zod schema from `_shared/schemas`, thin controller, service, repository, Blueprint envelope `{ data, message, errors }`, and no internal details in errors.
-- **Frontend**: Blueprint folder layout; atomic tiers (`atoms/molecules/organisms/templates`) inside `features/<domain>/components/`; no `any`; RHF + shared Zod schemas; TanStack Query for server state; Zustand for client state; handle loading/error/empty states.
-- **Never** put the service role key or other secrets in frontend code, tests, commits or Vercel environment variables. Only `VITE_`-prefixed public values reach the browser.
-- **Hosting is Vercel**: new top-level routes need nothing extra (the SPA rewrite covers them), but new static folders must be added to the rewrite exclusions and cache headers in `frontend/vercel.json`.
+- **Never** put the service role key or other secrets in frontend code, tests, commits or Vercel env vars. Do not read `.env*` files.
 - **No real-money mechanics** of any kind.
+- `prototype/` is reference only (float math). Never copy it into production code.
+- Never push to production or remote Supabase (`supabase db push`, `link` and `functions deploy` and `vercel --prod` are denied). Use the local stack only.
 
 ## Commands
 | Purpose | Command |
@@ -30,6 +34,6 @@ This is a **spec-driven** project. Read the relevant spec in `/docs` before writ
 ## Finishing a task
 - All checks pass locally.
 - Tick the task checkbox in `docs/03-development/tasks.md`.
-- Commit with the Blueprint format (`feat:`, `fix:`, `docs:` …). In the PR description, list the task and requirement IDs.
-- Never merge your own PR: Ramil reviews and merges. Stay inside the paths your task's owner owns (tasks.md "Team & ownership"); if you must touch another track's paths, say so in the PR so CODEOWNERS review applies.
-- If you changed behavior, update the spec in the same PR.
+- Commit in the Blueprint format (`feat:`, `fix:`, `style:`, `refactor:`, `chore:`, `docs:`, `test:`). In the PR description, list the task and requirement IDs (e.g. `Implements T-SIM-04 (FR-FIGHT-02, NFR-DET-01)`).
+- Never merge your own PR: Ramil reviews and merges. Stay inside the task owner's paths (tasks.md "Team & ownership"). If you touch another track's paths, say so in the PR.
+- If behavior changed, update the spec in the same PR (`/spec-change`).

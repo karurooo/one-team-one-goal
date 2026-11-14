@@ -1,0 +1,559 @@
+{
+ "pre_export": {
+  "root_has_no_location_keys": {
+   "pass": true,
+   "actions_with_root_location": []
+  },
+  "loops_first_equals_last": {
+   "Idle": {
+    "first_frame": 1,
+    "last_frame": 61,
+    "max_channel_diff": 0.0,
+    "pass": true
+   },
+   "Walk": {
+    "first_frame": 1,
+    "last_frame": 25,
+    "max_channel_diff": 0.0,
+    "pass": true
+   },
+   "Hingal_Exhausted": {
+    "first_frame": 1,
+    "last_frame": 17,
+    "max_channel_diff": 0.0,
+    "pass": true
+   }
+  },
+  "key_poses": {
+   "Idle": {
+    "range": [
+     1,
+     61
+    ],
+    "expected_range": [
+     1,
+     61
+    ],
+    "authored_key_frames": [
+     1,
+     12,
+     21,
+     24,
+     36,
+     40,
+     50,
+     61
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "Walk": {
+    "range": [
+     1,
+     25
+    ],
+    "expected_range": [
+     1,
+     25
+    ],
+    "authored_key_frames": [
+     1,
+     7,
+     13,
+     19,
+     25
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "Tuka_Peck": {
+    "range": [
+     1,
+     19
+    ],
+    "expected_range": [
+     1,
+     19
+    ],
+    "authored_key_frames": [
+     1,
+     5,
+     9,
+     11,
+     19
+    ],
+    "required_key_frames": [
+     9
+    ],
+    "required_present": true,
+    "measured": {
+     "head_most_forward_frame": 9
+    },
+    "pass": true
+   },
+   "Sipa_Kick": {
+    "range": [
+     1,
+     25
+    ],
+    "expected_range": [
+     1,
+     25
+    ],
+    "authored_key_frames": [
+     1,
+     6,
+     8,
+     9,
+     11,
+     13,
+     14,
+     17,
+     20,
+     25
+    ],
+    "required_key_frames": [
+     11
+    ],
+    "required_present": true,
+    "measured": {
+     "spurs_most_forward_frame": 11
+    },
+    "pass": true
+   },
+   "Lipad_Jump": {
+    "range": [
+     1,
+     41
+    ],
+    "expected_range": [
+     1,
+     41
+    ],
+    "authored_key_frames": [
+     1,
+     8,
+     11,
+     14,
+     17,
+     20,
+     23,
+     26,
+     30,
+     33,
+     37,
+     41
+    ],
+    "required_key_frames": [
+     8,
+     14,
+     20,
+     26,
+     33
+    ],
+    "required_present": true,
+    "measured": {
+     "crouch_low_frame": 8,
+     "apex_strike_frame": 20,
+     "land_low_frame": 33,
+     "airborne_pelvis_lift_max_m": 0.001,
+     "crouch_depth_m": -0.046,
+     "land_depth_m": -0.042
+    },
+    "pass": true
+   },
+   "Hit_React": {
+    "range": [
+     1,
+     16
+    ],
+    "expected_range": [
+     1,
+     16
+    ],
+    "authored_key_frames": [
+     1,
+     3,
+     6,
+     10,
+     16
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "Hingal_Exhausted": {
+    "range": [
+     1,
+     17
+    ],
+    "expected_range": [
+     1,
+     17
+    ],
+    "authored_key_frames": [
+     1,
+     5,
+     9,
+     13,
+     17
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "Talikod_TurnAway": {
+    "range": [
+     1,
+     30
+    ],
+    "expected_range": [
+     1,
+     30
+    ],
+    "authored_key_frames": [
+     1,
+     5,
+     8,
+     11,
+     14,
+     17,
+     20,
+     24,
+     30
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "KO": {
+    "range": [
+     1,
+     40
+    ],
+    "expected_range": [
+     1,
+     40
+    ],
+    "authored_key_frames": [
+     1,
+     4,
+     9,
+     12,
+     16,
+     20,
+     24,
+     29,
+     33,
+     40
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "Ilag_Dodge": {
+    "range": [
+     1,
+     18
+    ],
+    "expected_range": [
+     1,
+     18
+    ],
+    "authored_key_frames": [
+     1,
+     4,
+     7,
+     8,
+     12,
+     18
+    ],
+    "required_key_frames": [],
+    "required_present": true,
+    "pass": true
+   },
+   "Banat_Combo": {
+    "range": [
+     1,
+     32
+    ],
+    "expected_range": [
+     1,
+     32
+    ],
+    "authored_key_frames": [
+     1,
+     3,
+     6,
+     9,
+     11,
+     14,
+     17,
+     19,
+     22,
+     25,
+     32
+    ],
+    "required_key_frames": [
+     6,
+     14,
+     22
+    ],
+    "required_present": true,
+    "measured": {
+     "head_forward_peaks": [
+      6,
+      14,
+      22
+     ]
+    },
+    "pass": true
+   }
+  },
+  "mesh": {
+   "triangles_total": 5548,
+   "max_influences": 4,
+   "pass": true
+  }
+ },
+ "glb": {
+  "file": "C:\\Users\\CarloG\\Desktop\\one-team-one-goal\\tools\\blender\\output\\manok.glb",
+  "size_bytes": 587876,
+  "size_MB": 0.561,
+  "under_1MB": true,
+  "extensions_used": [
+   "KHR_draco_mesh_compression"
+  ],
+  "animations": [
+   {
+    "name": "Banat_Combo",
+    "first_frame": 1,
+    "last_frame": 32,
+    "frame_count": 32
+   },
+   {
+    "name": "Hingal_Exhausted",
+    "first_frame": 1,
+    "last_frame": 17,
+    "frame_count": 17
+   },
+   {
+    "name": "Hit_React",
+    "first_frame": 1,
+    "last_frame": 16,
+    "frame_count": 16
+   },
+   {
+    "name": "Idle",
+    "first_frame": 1,
+    "last_frame": 61,
+    "frame_count": 61
+   },
+   {
+    "name": "Ilag_Dodge",
+    "first_frame": 1,
+    "last_frame": 18,
+    "frame_count": 18
+   },
+   {
+    "name": "KO",
+    "first_frame": 1,
+    "last_frame": 40,
+    "frame_count": 40
+   },
+   {
+    "name": "Lipad_Jump",
+    "first_frame": 1,
+    "last_frame": 41,
+    "frame_count": 41
+   },
+   {
+    "name": "Sipa_Kick",
+    "first_frame": 1,
+    "last_frame": 25,
+    "frame_count": 25
+   },
+   {
+    "name": "Talikod_TurnAway",
+    "first_frame": 1,
+    "last_frame": 30,
+    "frame_count": 30
+   },
+   {
+    "name": "Tuka_Peck",
+    "first_frame": 1,
+    "last_frame": 19,
+    "frame_count": 19
+   },
+   {
+    "name": "Walk",
+    "first_frame": 1,
+    "last_frame": 25,
+    "frame_count": 25
+   }
+  ],
+  "animation_names": [
+   "Banat_Combo",
+   "Hingal_Exhausted",
+   "Hit_React",
+   "Idle",
+   "Ilag_Dodge",
+   "KO",
+   "Lipad_Jump",
+   "Sipa_Kick",
+   "Talikod_TurnAway",
+   "Tuka_Peck",
+   "Walk"
+  ],
+  "skin_joint_count": 39,
+  "tari_socket_L_in_skin": true,
+  "tari_socket_R_in_skin": true,
+  "nodes_present": {
+   "tari_socket_L": true,
+   "tari_socket_R": true,
+   "Tari_Standard": true
+  },
+  "Tari_Standard_parent_node": "tari_socket_L",
+  "root_translation_channels": [
+   "Banat_Combo",
+   "Hingal_Exhausted",
+   "Hit_React",
+   "Idle",
+   "Ilag_Dodge",
+   "KO",
+   "Lipad_Jump",
+   "Sipa_Kick",
+   "Talikod_TurnAway",
+   "Tuka_Peck",
+   "Walk"
+  ],
+  "root_translation_nonzero": [],
+  "materials": [
+   "Body_DeepRed",
+   "Hackle_Gold",
+   "Beak_Horn",
+   "Eye_Orange",
+   "Eye_Black",
+   "Comb_Red",
+   "WingTip_Green",
+   "Tail_GreenBlack",
+   "Leg_Yellow",
+   "Tari_Wrap",
+   "Tari_Steel"
+  ],
+  "triangles_in_glb": 5548,
+  "compression": {
+   "uncompressed_size_bytes": 1165968,
+   "draco_available": true,
+   "used": "KHR_draco_mesh_compression",
+   "meshopt_available": false,
+   "note": "Blender's glTF exporter has Draco but no meshopt (EXT_meshopt_compression). Draco is only applied when the plain file is over 1 MB."
+  },
+  "pass": true
+ },
+ "all_pass": true,
+ "glb_roundtrip": {
+  "frames_compared": 19,
+  "worst_mm": 0.05,
+  "pass": true,
+  "per_frame": {
+   "Idle@1": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Idle@24": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Idle@61": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Walk@1": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Walk@13": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Tuka_Peck@5": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Tuka_Peck@9": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Sipa_Kick@11": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Lipad_Jump@8": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Lipad_Jump@20": {
+    "mesh_max_mm": 0.03,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Lipad_Jump@33": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Hit_React@3": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Hingal_Exhausted@9": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Talikod_TurnAway@30": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "KO@40": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Ilag_Dodge@8": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Banat_Combo@6": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Banat_Combo@14": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   },
+   "Banat_Combo@22": {
+    "mesh_max_mm": 0.02,
+    "bones_max_mm": 0.05,
+    "tari_mm": 0.0
+   }
+  }
+ }
+}

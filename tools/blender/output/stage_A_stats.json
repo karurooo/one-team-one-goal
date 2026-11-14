@@ -1,0 +1,11 @@
+{
+ "triangles_total": 5548,
+ "triangles_body": 5488,
+ "vertices": 2750,
+ "max_influences": 4,
+ "height_m": 0.689,
+ "min_z": 0.0,
+ "body_islands": 1,
+ "bones": 39,
+ "deform_bones": 37
+}

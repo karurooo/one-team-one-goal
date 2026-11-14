@@ -1,0 +1,101 @@
+{
+ "Idle": {
+  "frames": [
+   1.0,
+   61.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Walk": {
+  "frames": [
+   1.0,
+   25.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Tuka_Peck": {
+  "frames": [
+   1.0,
+   19.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Sipa_Kick": {
+  "frames": [
+   1.0,
+   25.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Lipad_Jump": {
+  "frames": [
+   1.0,
+   41.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Hit_React": {
+  "frames": [
+   1.0,
+   16.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Hingal_Exhausted": {
+  "frames": [
+   1.0,
+   17.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Talikod_TurnAway": {
+  "frames": [
+   1.0,
+   30.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 172.0,
+  "worst_bone": "root"
+ },
+ "KO": {
+  "frames": [
+   1.0,
+   40.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 85.0,
+  "worst_bone": "pelvis"
+ },
+ "Ilag_Dodge": {
+  "frames": [
+   1.0,
+   18.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ },
+ "Banat_Combo": {
+  "frames": [
+   1.0,
+   32.0
+  ],
+  "root_translation_max": 0.0,
+  "first_last_max_deg": 0.0,
+  "worst_bone": ""
+ }
+}

@@ -1,0 +1,45 @@
+# Ownership per docs/03-development/tasks.md "Team & ownership".
+# GitHub uses only the LAST matching line, so Ramil is repeated on every line.
+# Replace the placeholders with GitHub usernames:
+#   <ramil-gh> <carlo-gh> <cliff-gh> <patrick-gh>
+
+# Ramil reviews every PR
+*                                           <ramil-gh>
+
+# Carlo: specs, prototype, game client, asset pipeline
+/README.md                                  <ramil-gh> <carlo-gh>
+/CLAUDE.md                                  <ramil-gh> <carlo-gh>
+/docs/                                      <ramil-gh> <carlo-gh>
+/prototype/                                 <ramil-gh> <carlo-gh>
+/tools/blender/                             <ramil-gh> <carlo-gh>
+/frontend/src/game/                         <ramil-gh> <carlo-gh>
+/frontend/src/features/match/               <ramil-gh> <carlo-gh>
+/frontend/src/features/settings/            <ramil-gh> <carlo-gh>
+/frontend/public/models/                    <ramil-gh> <carlo-gh>
+
+# Patrick: repo, CI, Claude kit, database, Edge Functions, app shell
+/package.json                               <ramil-gh> <patrick-gh>
+/package-lock.json                          <ramil-gh> <patrick-gh>
+/.gitignore                                 <ramil-gh> <patrick-gh>
+/.mcp.json                                  <ramil-gh> <patrick-gh>
+/.claude/                                   <ramil-gh> <patrick-gh>
+/scripts/                                   <ramil-gh> <patrick-gh>
+/.github/                                   <ramil-gh> <patrick-gh>
+/supabase/migrations/                       <ramil-gh> <patrick-gh>
+/supabase/tests/                            <ramil-gh> <patrick-gh>
+/supabase/functions/                        <ramil-gh> <patrick-gh>
+/frontend/src/lib/                          <ramil-gh> <patrick-gh>
+/frontend/src/providers/                    <ramil-gh> <patrick-gh>
+/frontend/src/config/                       <ramil-gh> <patrick-gh>
+/frontend/src/components/                   <ramil-gh> <patrick-gh>
+/frontend/src/app/                          <ramil-gh> <patrick-gh>
+/frontend/src/types/                        <ramil-gh> <patrick-gh>
+/frontend/src/stores/                       <ramil-gh> <patrick-gh>
+/frontend/vercel.json                       <ramil-gh> <patrick-gh>
+
+# Cliff: simulation and app screens (after Patrick's /supabase/functions/ so it wins)
+/supabase/functions/_shared/sim/            <ramil-gh> <cliff-gh>
+/frontend/src/features/auth/                <ramil-gh> <cliff-gh>
+/frontend/src/features/profile/             <ramil-gh> <cliff-gh>
+/frontend/src/features/manok/               <ramil-gh> <cliff-gh>
+/frontend/src/features/leaderboard/         <ramil-gh> <cliff-gh>

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npx vitest *)",
+      "Bash(npx vitest)",
+      "Bash(deno test *)",
+      "Bash(deno lint *)",
+      "Bash(deno check *)",
+      "Bash(deno fmt *)",
+      "Bash(supabase start)",
+      "Bash(supabase stop)",
+      "Bash(supabase status)",
+      "Bash(supabase db reset)",
+      "Bash(supabase test db)",
+      "Bash(supabase gen types *)",
+      "Bash(supabase migration new *)",
+      "Bash(supabase functions serve *)",
+      "Bash(supabase functions serve)",
+      "Bash(git status *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git diff)",
+      "Bash(git log *)",
+      "Bash(git log)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git checkout *)",
+      "Bash(git switch *)"
+    ],
+    "deny": [
+      "Read(**/.env*)",
+      "Bash(supabase db push *)",
+      "Bash(supabase db push)",
+      "Bash(supabase link *)",
+      "Bash(supabase link)",
+      "Bash(supabase functions deploy *)",
+      "Bash(supabase functions deploy)",
+      "Bash(vercel --prod *)",
+      "Bash(vercel --prod)",
+      "Bash(vercel * --prod *)",
+      "Bash(vercel * --prod)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git push * --force *)",
+      "Bash(git push * --force)",
+      "Bash(git push * -f)",
+      "Bash(rm -rf *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/format.mjs\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}

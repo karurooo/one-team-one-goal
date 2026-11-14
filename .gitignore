@@ -23,3 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 /graphify-out
+
+# Secrets and personal Claude Code files
+.env*
+!.env.example
+CLAUDE.local.md
+.claude/settings.local.json

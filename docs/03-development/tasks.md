@@ -52,7 +52,7 @@ Changing a contract means updating the spec in the same PR and getting a review 
 
 ## M0 — Foundation & tooling
 
-- [ ] **T-SETUP-01 Monorepo skeleton.** `Owner: Patrick` Create the folder structure from architecture §3, root `package.json`, `.editorconfig`, `.gitignore` (includes `.env*`), README.
+- [x] **T-SETUP-01 Monorepo skeleton.** `Owner: Patrick` Create the folder structure from architecture §3, root `package.json`, `.editorconfig`, `.gitignore` (includes `.env*`), README.
   Done when: `npm install` works at root; the structure matches the spec. · Req: C1
 - [ ] **T-SETUP-02 Frontend app.** `Owner: Patrick` · Support: Carlo (Babylon deps) (Babylon deps, `@sim` alias) Vite + React + TS (strict flags from conventions §2), Tailwind, shadcn init (components from Blueprint list), react-router-dom, TanStack Query, Zustand, RHF + Zod, Sonner, next-themes, lucide-react, Sentry, vite-plugin-pwa. Path aliases `@/`, `@sim`, `@schemas`.
   Done when: `npm run dev` shows a placeholder lobby; `npm run build` succeeds. · Dep: T-SETUP-01

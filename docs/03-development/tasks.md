@@ -56,7 +56,7 @@ Changing a contract means updating the spec in the same PR and getting a review 
   Done when: `npm install` works at root; the structure matches the spec. · Req: C1
 - [ ] **T-SETUP-02 Frontend app.** `Owner: Patrick` · Support: Carlo (Babylon deps) (Babylon deps, `@sim` alias) Vite + React + TS (strict flags from conventions §2), Tailwind, shadcn init (components from Blueprint list), react-router-dom, TanStack Query, Zustand, RHF + Zod, Sonner, next-themes, lucide-react, Sentry, vite-plugin-pwa. Path aliases `@/`, `@sim`, `@schemas`.
   Done when: `npm run dev` shows a placeholder lobby; `npm run build` succeeds. · Dep: T-SETUP-01
-- [ ] **T-SETUP-03 Supabase project.** `Owner: Patrick` `supabase init`, `config.toml` (auth: min password 8, email confirm on, anonymous sign-ins on, CAPTCHA settings, rate limits), `deno.json` import map (`zod`, `hono`, `@supabase/supabase-js`).
+- [x] **T-SETUP-03 Supabase project.** `Owner: Patrick` `supabase init`, `config.toml` (auth: min password 8, email confirm on, anonymous sign-ins on, CAPTCHA settings, rate limits), `deno.json` import map (`zod`, `hono`, `@supabase/supabase-js`).
   Done when: `supabase start` runs locally; Studio opens. · Dep: T-SETUP-01
 - [ ] **T-SETUP-04 Shared code wiring.** `Owner: Cliff` · Support: Patrick `_shared/sim` and `_shared/schemas` importable from Vite **and** Deno (architecture §3.1).
   Done when: one sample schema and one sample sim function are imported by a frontend test and a Deno test, and both pass. · Dep: T-SETUP-02, T-SETUP-03

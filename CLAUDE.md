@@ -2,6 +2,19 @@
 
 This is a **spec-driven** project. The specs in `/docs` are the source of truth. Read the relevant spec before writing code, and keep code and specs in agreement.
 
+## Project overview
+
+Sabong: a competitive, skill-based 3D web sabong (cockfighting) game. React + TypeScript + Vite frontend with Babylon.js for 3D; Supabase (Postgres + RLS, Auth, Edge Functions, Storage) backend. Full detail: [product-requirements.md](docs/01-requirements/product-requirements.md), [architecture.md](docs/02-design/architecture.md).
+
+## Repository structure
+
+- `frontend/` — Vite + React app (owners per path: see `.claude/rules/frontend.md`).
+- `supabase/` — `migrations/`, `tests/` (pgTAP), `seeds/`, `functions/` (Edge Functions + `_shared/{sim,schemas,http,db}`).
+- `docs/` — specs (`01-requirements` → `05-deployment`), including `03-development/tasks.md` (task list and ownership) and `conventions.md` (naming, Git workflow, standards).
+- `prototype/` — reference-only PoC, never import from it.
+- `.github/CODEOWNERS` and `pull_request_template.md` — review routing and PR checklist.
+- `.claude/agents/` — read-only reviewers (`rls-reviewer`, `sim-determinism-reviewer`, `spec-conformance-reviewer`); run the relevant one before opening a PR.
+
 ## Before starting any task
 1. Find the task in `docs/03-development/tasks.md` and the requirement IDs it references (or use `/implement-task <TASK-ID>`).
 2. Read the design sections for that area (`docs/02-design/*`) and the acceptance criteria (`docs/01-requirements/*`).
